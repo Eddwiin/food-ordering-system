@@ -9,6 +9,4 @@ public interface OrderRepository {
     Order save(Order save);
 
     Optional<Order> findByTackingId(TrackingId trackingId);
-
-
 }
