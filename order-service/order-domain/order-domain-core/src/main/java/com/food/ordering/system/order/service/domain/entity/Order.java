@@ -7,6 +7,7 @@ import com.food.ordering.system.order.service.domain.valueobject.OrderItemId;
 import com.food.ordering.system.order.service.domain.valueobject.StreetAddress;
 import com.food.ordering.system.order.service.domain.valueobject.TrackingId;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -172,7 +173,7 @@ public class Order extends AggregateRoot<OrderId> {
         private RestaurantId restaurantId;
         private StreetAddress delivryAdress;
         private Money price;
-        private List<OrderItem> items;
+        private List<OrderItem> items = new ArrayList<>();
         private TrackingId trackingId;
         private OrderStatus orderStatus;
         private List<String> failureMessages;
