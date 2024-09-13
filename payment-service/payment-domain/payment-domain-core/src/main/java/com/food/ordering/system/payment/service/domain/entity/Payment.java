@@ -44,6 +44,10 @@ public class Payment extends AggregateRoot<PaymentId> {
         setCreatedAt(builder.createdAt);
     }
 
+    public static Builder builder() {
+        return new Builder();
+    }
+
     public OrderId getOrderId() {
         return orderId;
     }
@@ -81,10 +85,6 @@ public class Payment extends AggregateRoot<PaymentId> {
         private ZonedDateTime createdAt;
 
         private Builder() {
-        }
-
-        public static Builder newBuilder() {
-            return new Builder();
         }
 
         public Builder id(PaymentId val) {
